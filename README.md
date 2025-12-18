@@ -1,2 +1,2 @@
-# Quick-Notes
-Simple and Fast Android Notepad App
+# Quick Notes
+As the name suggests, it's a note-taking application.
