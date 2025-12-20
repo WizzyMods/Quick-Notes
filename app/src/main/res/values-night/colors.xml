@@ -1,0 +1,22 @@
+<resources>
+    <!--Ana Renk-->
+    <color name="colorPrimary">#212121</color>
+    <color name="colorPrimaryDark">#212121</color>
+    <color name="colorAccent">#42A5F5</color>
+    <color name="colorControlNormal">#42A5F5</color>
+    <color name="colorControlHighlight">#BDBDBD</color>
+    <color name="colorOnPrimary">#FFFFFF</color>
+    <!--Toolbar Rengi-->
+    <color name="colorPrimaryHint">#E0E0E0</color>
+    <color name="colorPrimaryVariant">#F57C00</color>
+    <!--Arka Plan ve Yüzey Renkleri-->
+    <color name="colorSecondary">#2196F3</color>
+    <color name="colorSecondaryVariant">#FFA000</color>
+    <color name="colorOnSecondary">#000000</color>
+    <color name="colorBackground">#212121</color>
+    <color name="colorOnBackground">#FFFFFF</color>
+    <color name="colorSurface">#424242</color>
+    <color name="colorOnSurface">#FFFFFF</color>
+    <!--Yarı Saydam #80-->
+    <color name="colorPrimaryHalf">#4D212121</color>
+</resources>

@@ -1,0 +1,52 @@
+plugins {
+	id 'com.android.application'
+}
+
+android {
+    compileSdk 34
+    namespace "com.QuickNotes.Dev" // namespace genellikle burada veya defaultConfig içinde olur
+
+    useLibrary 'org.apache.http.legacy'
+
+    defaultConfig {
+        applicationId "com.QuickNotes.Dev"
+        minSdkVersion 21
+        targetSdkVersion 35
+        versionCode 4
+        versionName "0.4"
+
+        // --- AdMob ID Okuma Bölümü ---
+        Properties properties = new Properties()
+        def propertiesFile = project.rootProject.file('local.properties')
+        
+        if (propertiesFile.exists()) {
+            properties.load(propertiesFile.newDataInputStream())
+        }
+
+        // Eğer local.properties'de ADMOB_APP_ID yoksa hata vermemesi için varsayılan boş değer atayalım
+        def appId = properties.getProperty("ADMOB_APP_ID") ?: ""
+        
+        manifestPlaceholders = [adMobAppId: appId]
+        // -----------------------------
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+
+dependencies {
+	implementation fileTree(dir: 'libs', include: ['*.jar'])
+	implementation 'androidx.appcompat:appcompat:1.7.1'
+	implementation 'com.google.android.material:material:1.12.0'
+	implementation platform('com.google.firebase:firebase-bom:34.1.0')
+	implementation 'com.google.firebase:firebase-database'
+	implementation 'com.google.android.gms:play-services-ads:23.4.0'
+	implementation 'com.google.android.gms:play-services-maps:17.0.1'
+	implementation 'com.google.code.gson:gson:2.11.0'
+	implementation 'com.airbnb.android:lottie:6.5.2'
+}

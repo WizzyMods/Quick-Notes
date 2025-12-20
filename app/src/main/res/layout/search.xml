@@ -1,0 +1,61 @@
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical">
+	<LinearLayout
+		android:id="@+id/toolbarBg"
+		android:layout_width="match_parent"
+		android:layout_height="56dp"
+		android:padding="6dp"
+		android:background="@color/colorPrimary"
+		android:gravity="center_vertical"
+		android:orientation="horizontal"
+		android:animateLayoutChanges="true">
+		<ImageView
+			android:id="@+id/toolbarBackImage"
+			android:layout_width="40dp"
+			android:layout_height="40dp"
+			android:padding="5dp"
+			android:src="@drawable/arrow_back_72dp_black"
+			android:scaleType="fitCenter"
+			android:tint="?attr/colorOnPrimary" />
+		<EditText
+			android:id="@+id/toolbarSearchEditText"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:padding="8dp"
+			android:background="@android:color/transparent"
+			android:gravity="center_vertical"
+			android:textSize="20sp"
+			android:textColor="@color/colorOnPrimary"
+			android:hint="@string/search"
+			android:textColorHint="@color/colorPrimaryHint"
+			android:singleLine="true"
+			android:imeOptions="actionSearch"
+			android:layout_weight="1"
+			android:transitionName="search" />
+		<ImageView
+			android:id="@+id/toolbarClearImage"
+			android:layout_width="40dp"
+			android:layout_height="40dp"
+			android:padding="5dp"
+			android:src="@drawable/close_72dp_black"
+			android:scaleType="fitCenter"
+			android:tint="?attr/colorOnPrimary"
+			android:visibility="gone" />
+	</LinearLayout>
+	<androidx.recyclerview.widget.RecyclerView
+		android:id="@+id/searchRecycler"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:padding="8dp"
+		tools:listitem="@layout/noterecylerview" />
+	<CalendarView
+		android:id="@+id/calendarview1"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:padding="8dp" />
+</LinearLayout>
