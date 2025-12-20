@@ -10,7 +10,7 @@ android {
 
     defaultConfig {
         applicationId "com.QuickNotes.Dev"
-        minSdkVersion 21
+        minSdkVersion 23
         targetSdkVersion 35
         versionCode 4
         versionName "0.4"
